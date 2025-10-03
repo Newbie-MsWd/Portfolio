@@ -1,0 +1,188 @@
+/* General Reset & Body */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fb;   /* softer background */
+  color: #2d2d2d;
+  line-height: 1.7;
+}
+
+/* Header */
+header {
+  position: relative;          
+  text-align: center;
+  padding: 60px 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(135deg, #4f7ecb, #7aa3e0); /* stronger gradient for contrast */
+}
+
+header img {
+  width: 140px;
+  height: 140px;
+  border-radius: 30%;
+  object-fit: cover;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+  border: 4px solid #fff; /* added border for pop */
+}
+
+header img:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;  /* bright for readability */
+  margin: 15px 0 5px;
+}
+
+header p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9); /* readable over gradient */
+}
+
+/* Section Base */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #2d2d2d;  /* dark for readability */
+  font-weight: 700;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #4f7ecb; /* matches header gradient */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* About Section */
+#About {
+  text-align: center;
+}
+
+#About p {
+  font-size: 18px;
+  color: #444;  /* slightly darker for contrast */
+  max-width: 750px;
+  margin: auto;
+}
+
+/* Skills Section */
+#Skills {
+  background: #e3ecfc;  /* lighter blue for contrast */
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+#Skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#Skills li {
+  background: linear-gradient(135deg, #4f7ecb, #7aa3e0);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#Skills li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Experience Section */
+#Experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+#Experience article {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Experience article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+#Experience h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+#Experience p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: #f1f3f6;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 15px;
+  color: #666;
+}
+
+footer a {
+  color: #4f7ecb;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #375a9e;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  section h2 {
+      font-size: 24px;
+  }
+
+  #Experience article {
+      width: 90%;
+  }
+}
